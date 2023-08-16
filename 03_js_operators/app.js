@@ -7,7 +7,7 @@ js operators
 4 conditional operators : < > <= >= !=
 5 unary operator: ++ -- 
 6 logical operator : && || ^
-7 ternary operator : questionmark:
+7 ternary operator : ?:
 8 equality operator == ===
 
  */
@@ -69,6 +69,59 @@ p+=1 //11+1 12
 p++ //12+1 13
 p-- //13-1 12
 console.log(`p is:${p}`)
+
+
+// logical operators
+
+//&& and  || or ^ xor
+
+let q=24
+if(q>0 && q%2==0){
+    console.log(`${q} is even number`)
+}
+else{
+    console.log(`${q} is odd number`)
+}
+
+let inRelation=false
+let parentsAgreed=false
+if(inRelation || parentsAgreed){
+    console.log("they get married soon")
+}
+else{
+    console.log("wait untill the parents agreed")
+}
+
+//ternary operator
+//syntax:  (condition) ? true : false;
+
+marks=40;
+message='';
+(marks>=35) ?  message='you clera the exam' : message='you failed the exam'
+console.log(message)
+
+//equality operator: == it can perform conversion and equality operation,
+// === it performs only equality
+
+
+let s=10;
+let t='10';
+if(s==t){
+    console.log("both are equal")
+}
+else{
+    console.log("both are not equal")
+}
+
+s=10;
+t='10';
+if(s===t){
+    console.log("both are equal")
+}
+else{
+    console.log("both are not equal")
+}
+
 
 
 
