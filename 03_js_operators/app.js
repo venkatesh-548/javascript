@@ -122,6 +122,152 @@ else{
     console.log("both are not equal")
 }
 
+//arithematic operators
+//addition 
+a=10
+b='10'
+console.log(a+b)
+
+a=10
+b=10
+console.log(a+b)
+a=10
+b="a"
+console.log(a+b)
+console.log(10+15+'20xy'+30+40)
+console.log(100+false)
+console.log(100+true)
+console.log(100+'true')
+
+
+//subtraction
+console.log(100-true)
+console.log(100-'10')
+console.log(100-'true')
+console.log(100-true-'hi')
+
+//multiplication
+console.log(100*true)
+console.log(100*'10')
+console.log(100*'true')
+
+//division
+console.log(100/true)
+console.log(100/false)
+console.log(100/'10')
+console.log(100/"a")
+
+//modulo division
+console.log(100%true)
+console.log(100%"true")
+console.log(100%'5')
+
+//relational operators
+
+console.log(100>true)
+console.log(100=='100')
+console.log(100==='100') //== will not check the dt it will check the vale is same or not
+console.log(100==100)
+console.log(100===100)
+
+//logical operators
+//logical and check greatest of three
+a=10
+b=120
+c=30
+message=""
+if(a>b && a>c)
+{
+    message+=`${a} is greater`
+}
+else if(b>c && b>a)
+{
+    message+=`${b} is greater`
+}
+else{
+    message+=`${c} is greater`
+}
+console.log(message)
+
+//logical or check alphabet or not
+
+let ch="a"
+message=""
+if('a'<=ch<='z' ||"A"<=ch<="Z")
+{
+    message=`${ch} is alphabet`
+}
+else if("0"<=ch<="9")
+{
+    message=`${ch} is number`
+}
+else{
+    message=`${ch} is special character`
+}
+console.log(message)
+
+//assignment operators
+
+a=10
+a+=30
+a+=40
+console.log(a)
+
+b=40
+b-=10
+b-=20
+console.log(b)
+
+c=2
+c*=5
+c*=10
+console.log(c)
+
+d=100
+d/=5
+d/=4
+console.log(d)
+
+e=100
+e%=3
+console.log(e)
+
+//ternary operator
+n=20
+m=n%2==0? "even":"odd"
+console.log(m)
+
+n=-10
+x=n>0?"positive":"negative"
+console.log(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
