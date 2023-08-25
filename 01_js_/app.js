@@ -20,3 +20,7 @@ let b=200;
 let sum=a+b;
 console.log("the sum of "+a+" , " +b+" is: " +sum)//ES5 
 console.log(`the sum of ${a},${b} is :${sum}`) //ES6 version6
+
+let x
+
+console.log(x)
