@@ -99,3 +99,9 @@ while(i<=st.length-1){
     i+=1
 }
 console.log(`the count of a is : ${count}`)
+
+for(i=50;i>=1;i--){
+    if(i%3==0){
+        console.log(i)
+    }
+}

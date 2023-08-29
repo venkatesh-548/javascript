@@ -94,3 +94,10 @@ for(i=n;i>=1;i--){
 }
 console.log(res)
 
+//for in loop
+colors=['red','blue','green','yellow','orange']
+for(let color in colors){
+    console.log(colors[color])
+}
+
+
