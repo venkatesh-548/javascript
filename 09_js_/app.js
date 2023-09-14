@@ -264,3 +264,92 @@ innerFun= outerFun()
 console.log(innerFun.student)
 
 
+//functions in javascript
+
+//basic function
+function fun()
+{
+    a=10
+    b=20
+    console.log(a+b);
+}
+fun()
+
+//function without parameter and without return keyword
+
+function f1()
+{
+    let a
+    let b=20
+    console.log(a-b);
+}
+f1()
+
+//function without parameter with return type
+function f2()
+{
+    let a=10
+    let b=20
+    return a+b
+}
+console.log(f2());
+
+//function with parameter without return type
+
+function f1(x,y)
+{
+    x
+    y
+    console.log(c=a*b);
+
+}
+f1(2,3)
+// console.log(f1(10,20));
+
+
+//prepare chiken curry with functions
+
+let glassBowl=function(rawChiken,masala)
+{
+   let marinatedChiken=`mixing:(${rawChiken}+${masala})`
+   return marinatedChiken
+}
+let cookingBowl=function(marinatedChiken,water)
+{
+    let cookingChiken=`cooking:(${marinatedChiken}+${water})`
+    return cookingChiken
+}
+let eatingBowl=function(cookingChiken,rice)
+{
+    let eatingChiken=`eating:(${cookingChiken}+${rice})`
+    console.log(eatingChiken);
+}
+let rawChiken="3kg chiken"
+let masala="garlic,pepper,oil"
+let marinatedChiken=glassBowl(rawChiken,masala)
+let water="3l"
+let cookingChiken=cookingBowl(marinatedChiken,water)
+let rice="1kg"
+let eatingChiken=eatingBowl(cookingChiken,rice)
+
+
+glassBowl=function(rawChiken,masala)
+{
+   let marinatedChiken=`marinatedChiken:(${rawChiken}+${masala})`
+   return marinatedChiken
+}
+cookingBowl=function(marinatedChiken,water)
+{
+    let cookingChiken=`cookingchiken:(${marinatedChiken}+${water})`
+    return cookingChiken
+}
+eatingBowl=function(cookingChiken,rice)
+{
+    let eatingChiken=`eating:(${cookingChiken}+${rice})`
+    console.log(eatingChiken);
+}
+eatingBowl(cookingChiken,"1kg rice")
+console.log(glassBowl("3kg chiken","garlic,pepper,oil"));
+console.log(cookingBowl("marintedchiken","1l water"));
+
+

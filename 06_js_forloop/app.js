@@ -101,3 +101,14 @@ for(let color in colors){
 }
 
 
+var f=[10,20,30,40]
+for(let i in f)
+{
+    console.log(i);
+}
+var g=[10,20,30,40]
+for (let j of g)
+{
+    console.log(j);
+}
+

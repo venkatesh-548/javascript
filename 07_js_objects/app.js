@@ -69,9 +69,26 @@ console.log(mobile)
 delete mobile.color
 console.log(mobile)
 
+// concat()
+
+s="hello"
+t="world"
+console.log(s.concat(t));
+
+//indexof()
+s="hello"
+console.log(s.toUpperCase());
+
+s="HELLO"
+b=s.toLowerCase()
+console.log(b);
 
 
+//split()
+
+s="helloworld"
+console.log(s.split(''));
+console.log(s.split());
 
 
-
-
+a=[1,2,3,4]

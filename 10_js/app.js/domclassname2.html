@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="a">malakpet</h1>
+    <p class="a">ameerpet</p>
+    <h2 class="a">kothapet</h2>
+    <h3 class="b">dilshuknagar</h3>
+    <script>
+        let x=document.getElementsByClassName("a")
+        console.log(x);
+        // console.log(x[0]);
+        // console.log(x[1]);
+        // console.log(x[2]);
+        // console.log(x[3]);
+        // console.log(x[0].innerHTML);
+        // console.log(x[0].innerText);
+        // console.log(x[0].textContent);
+        // let y=document.getElementsByClassName("b")
+        // console.log(y);
+        // console.log(y[0]);
+
+        for(let i in x)
+        {
+            console.log(i);
+        }
+
+        for(let j of x)
+        {
+            console.log(j);
+        }
+
+        for(let j of x)
+        {
+            console.log(j.innerHTML);
+        }
+
+        for(let i=0;i<x.length;i++)
+        {
+            console.log(i.innerHTML);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
