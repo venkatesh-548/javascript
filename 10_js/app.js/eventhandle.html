@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Document</title>
+</head>
+<body>
+    <!-- <button onclick="f1()">click me</button>
+    <script>
+        function f1()
+        {
+            window.alert("js is synchronous")
+        }
+    </script> -->
+    <!-- <button>click me yaa</button>
+    <script>
+        let f=document.getElementsByTagName("button")
+        console.log(f);
+        f[0].onclick=function f1()
+        {
+            window.alert("js is loosely typed language")
+        } -->
+
+        <!--<button id="a">cllict fast</button>
+        <script>
+            let z=document.getElementById("a")
+            z.addEventListener("click" ,function f1()
+            {
+                window.alert("it can used for both FE and BE")
+            }) -->
+            
+        <!-- </script>
+    </script> --> 
+
+    <!-- <input type="text" placeholder="hello" id="x">
+    <img src="../../../Html-and-CSS/Html and Css/images/cuppichino.jpg" onclick="f1()" style="height: 100px; width: 200px;">
+
+    <hr>
+
+    <h1></h1>
+
+    <script>
+        function f1()
+        {
+            let z=document.getElementById("x").value
+            document.querySelector("h1").innerHTML=z
+        }
+    </script> -->
+
+    <input type="text" placeholder="enter num1" id="a"> <br><br>
+    <input type="text" placeholder="enter num2" id="b"><br><br>
+    <button id="x" onclick="f1()">ADD</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="y" onclick="f1()">SUB</button>
+
+    <hr>
+
+    <h1 id="c"></h1>
+    <h1 id="d"></h1>
+
+    <script>
+        function f1()
+        {
+            let p=document.getElementById("a").value
+            let q=document.getElementById("b").value
+            let sum=Number(p)+Number(q)
+            let sub=Number(p)-Number(q)
+            document.querySelector("#c").innerHTML=sum
+            document.querySelector("#d").innerHTML=sub
+        }
+        // function f2()
+        // {
+        //     let p=document.getElementById("a").value
+        //     let q=document.getElementById("b").value
+        //     let sub=Number(p)-Number(q)
+        //     document.querySelector("#d").innerHTML=sub
+        // }
+    </script>
+
+
+
+
+
+</body>
+</html>
