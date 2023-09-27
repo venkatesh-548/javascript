@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text " placeholder="enter a color" id="inp1">
+    <button onclick="abc()">click</button>
+
+    <script>
+        // setInterval(() => {
+            
+        //     document.write("hello")
+        // }, 1000);
+
+    //     setTimeout(() => {
+    //         document.write("welcome")
+    //     }, 4000);
+
+    function abc()
+    {
+        let color=document.getElementById("inp1").value;
+        
+        document.querySelector("body").style.backgroundColor=color
+    }
+
+    function abc1()
+    {
+        setTimeout(() => {
+            abc()
+        }, 1000);
+    }
+
+    // let arr=["violet","blue","red","orange","green","navy","white","black"]
+    // function abc()
+    // {
+    // for(i=0;i<arr.length;i++)
+    // {
+    //     setInterval(() => {
+    //         document.querySelector("body").style.backgroundColor+=arr[i]
+    //     }, 5000);
+    // }
+    // }
+    </script>
+</body>
+</html>

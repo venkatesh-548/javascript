@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+            color: navy;
+            text-shadow: 2px 2px 2px aqua,1px -1px 1px aqua,1px -1px 1px aqua,-1px -1px 1px aqua;
+            animation: clock 20s infinite;
+        }
+        body{
+            background-color: skyblue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 150px;
+            animation: clock 20s infinite;
+        }
+        @keyframes clock{
+            from{
+                filter: hue-rotate(0deg);
+            }
+            to{
+                filter: hue-rotate(2000deg);
+            }
+        }
+        div{
+            height: 200px;
+            width: 300px;
+            background-color:cyan;
+            position: relative;
+            left: 500px;
+        }
+        #hour{
+            font-size: 50px;
+        }
+        #date{
+            font-size: 25px;
+        }
+        .a{
+            text-shadow: 2px 2px 2px white,2px -2px 2px white,2px -2px 2px white,-2px -2px 2px white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>DIGITAL CLOCK</h1>
+    <div class="container">
+        <span id="hour" class="a">hai</span>
+        <span id="date" class="a">hello</span>
+    </div>
+    <script>
+        function display()
+        {
+            let date=new Date();
+            let h=date.getDate();
+            let m=date.getMinutes();
+            let s=date.getSeconds();
+            let day=date.getDay();
+            let date1=date.getDate();
+            let mon=date.getMonth();
+            let year=date.getFullYear();
+            
+            let h1=(h>12)?(h-12):h
+            let h2=(h1<10)?("0"+h1):h1
+
+            let m1=(m<10)?("0"+m):m
+
+            let s1=(s<10)?("0"+s):s
+
+            let day1=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            let day2=day1[day]
+
+            let mon1=["jan","fab","mar","apr","may","june","july","aug","Sept","oct","nov","dec"]
+            let mon2=mon1[mon]
+
+            document.getElementById("hour").innerHTML=`${h2} : ${m} : ${s1}`
+            document.getElementById("date").innerHTML=`${day2} ${date1} ${mon2} ${year}`
+
+            setTimeout(() => {
+            display()
+        },1000);
+        }
+        display()
+    </script>
+</body>
+</html>

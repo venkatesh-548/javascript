@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name1">NAME:</label><input type="text" id="name1">
+    <br>
+    <label for="phone1">PHONE:</label><input type="text" id="phone1">
+    <br>
+    <input type="submit" onclick="fun()">
+    <script>
+        function fun()
+        {
+            name=document.getElementById("name1").value
+            phone=document.getElementById("phone1").value
+            console.log(name)
+            console.log(phone);
+        }
+
+    </script>
+</body>
+</html>

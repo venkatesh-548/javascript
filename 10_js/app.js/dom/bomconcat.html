@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter name" id="name">
+    <br>
+    <input type="number" placeholder="number" id="phone">
+    <h1 id="abc"></h1>
+    <h1 id="abc1"></h1>
+    <input type="submit" onclick="dom()">
+    <script>
+        function dom()
+        {
+            let name1=document.getElementById("name").value;
+
+            let a=document.getElementById("abc")
+
+            a.innerHTML=`my name is: ${name1}`
+            console.log(a);
+
+            let phone1=document.getElementById("phone").value;
+
+            let b=document.getElementById("abc1")
+
+            b.innerHTML=`my phone number is: ${phone1}`
+            console.log(b);
+
+        }
+    </script>
+</body>
+</html>
