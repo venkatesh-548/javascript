@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        .container{
+            height: 500px;
+            width: 400px;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            border-radius: 40px;
+            border: 5px solid red;
+        }
+        h1{
+            background-color: navy;
+            color: azure;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            /* line-height: 50px; */
+        }
+        span{
+            position: relative;
+            left: 250px;
+            top: -26px;
+            display: none;
+        }
+        label{
+            position: relative;
+            left: 0px;
+            line-height: 30px;
+        }
+        button{
+            height: 30px;
+            width: 60px;
+            border-radius: 5px;
+            position: relative;
+            top: 10px;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>REGESTRATION FORM</h1>
+        </div>
+        <form action="">
+            <div class="field">
+                <label for="name">ENTER NAME</label><br><input type="text" id="name"><br>
+                <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                <span><i class="fa-regular fa-square-check"></i></span>
+                <small>error msg</small>
+            </div>
+            <div class="field">
+                <label for="name">ENTER PHONE NO</label><br><input type="text" id="name"><br>
+                <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                <span><i class="fa-regular fa-square-check"></i></span>
+                <small>error msg</small>
+            </div>
+            <div class="field">
+                <label for="name">ENTER EMAIL</label><br><input type="text" id="name"><br>
+                <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                <span><i class="fa-regular fa-square-check"></i></span>
+                <small>error msg</small>
+            </div>
+            <div class="field">
+                <label for="name">ENTER PASSWORD</label><br><input type="text" id="name"><br>
+                <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                <span><i class="fa-regular fa-square-check"></i></span>
+                <small>error msg</small>
+            </div>
+            <div class="field">
+                <label for="name">ENTER CONFIRM PASSWORD</label><br><input type="text" id="name"><br>
+                <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                <span><i class="fa-regular fa-square-check"></i></span>
+                <small>error msg</small>
+            </div>
+            <button>submit</button>
+        </form>
+    </div>
+</body>
+</html>

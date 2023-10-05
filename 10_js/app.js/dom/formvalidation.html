@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,p{
+            position: relative;
+            top: 50px;
+            left: 200px;
+            /* line-height: 50px; */
+        }
+        button{
+            position: relative;
+            top: 80px;
+            left: 350px;
+        }
+        tr{
+            line-height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="name">USERNAME</label></td>
+            <td>:</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td><label for="pass">PASSWORD</label></td>
+            <td>:</td>
+            <td><input type="text" id="pass"></td>
+        </tr>
+        <tr>
+            <td><label for="conf">CONFIRMPASSWORD</label></td>
+            <td>:</td>
+            <td><input type="text" id="conf"></td>
+        </tr>
+    </table>
+    <button onclick="details()">submit</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+<script>
+    function details()
+    {
+        let name1=document.getElementById("name").value;
+        if(name1.length>3 && name1.length<30)
+        {
+            localStorage.setItem("NAME",name1)
+            let name2=localStorage.getItem("NAME")
+            document.getElementById("p1").innerHTML=`the name is ${name2}`
+            document.getElementById("p1").style.color=`green`
+        }
+        if(name1=="")
+        {
+            document.getElementById("p1").innerHTML=`don't leave empty`
+            document.getElementById("p1").style.color=`red`
+        }
+
+        let pass1=document.getElementById("pass").value;
+        let pass2=document.getElementById("conf").value;
+        if(pass1==pass2) 
+        {
+            if(pass2.length>=8 && pass2.length<=16)
+            {
+            localStorage.setItem("PASSWORD",pass2)
+            let pass3=localStorage.getItem("PASSWORD")
+            document.getElementById("p2").innerHTML=`confirmed password is ${pass3}`
+            document.getElementById("p2").style.color=`green`
+            }
+            else
+            {
+                document.getElementById("p2").innerHTML=`the password must be in 8-16 characters`
+                document.getElementById("p2").style.color=`red`
+            }
+        }
+        else
+        {
+            document.getElementById("p2").innerHTML=`password doesnot match`
+            document.getElementById("p1").style.color=`red`
+            
+        }
+    }
+</script>
+</html>

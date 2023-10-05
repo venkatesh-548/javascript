@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <button onclick="calculation()"> click </button>
+    <h1 id="h1"></h1>
+    <input type="text" id="inp1">
+    <button onclick="calculation()"> click </button>
+    <h2 id="h2"></h2>
+    <input type="text" id="inp1">
+    <button onclick="calculation()"> click </button>
+    <h2 id="a"></h2>
+    <script>
+        function calculation()
+        {
+            let a=document.getElementById("inp1").value;
+            let b=Math.sqrt(a)
+            document.getElementById("h1").innerHTML=`the squre root of ${a} is:${b}`
+
+        }
+        function calculation1()
+        {
+            let a1=document.getElementById("inp1").value;
+            let c=Math.cbrt(a1)
+            document.getElementById("h2").innerHTML=`the cube root of the ${a} is:${c}`
+        }
+
+        function calculation2()
+        {
+            let d=Math.log(a)
+            document.getElementById("a").innerHTML=`the log of the ${a} is:${d}`
+        }   
+    </script>
+</body>
+</html>

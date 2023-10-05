@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #imag{
+            height: 300px;
+            width: 500px;
+        }
+        .left{
+            position: relative;
+            left: 40px;
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
+        }
+        .right{
+            position: relative;
+            right: 40px;
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"><i class="fa-solid fa-circle-chevron-left"></i></div>
+        <div class="img"><img src="./images/img5.jpg" alt="" id="imag"></div>
+        <div class="right"><i class="fa-solid fa-circle-chevron-right"></i></div>
+    </div>
+
+    <script>
+        let images=['img1','img2','img3','img4','img5','img6','img7','img8','img9','img10']
+
+        let imag1=document.getElementById("imag")
+        let imagindex=5;
+
+        let leftarrow=document.querySelector(".left")
+        let rightarrow=document.querySelector(".right")
+
+        leftarrow.onclick=function()
+        {
+            imagindex=imagindex-1
+            img.setAttribute('src','images/'+images[imagindex])
+
+        }
+
+        rightarrow.onclick=function(){
+            imagindex+=1
+            img.setAttribute('src','images/'+images[imagindex])
+        }
+
+
+
+    </script>
+</body>
+</html>

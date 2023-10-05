@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #but{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            min-width: 100px;
+            position: relative;
+            left: 600px;
+            top: 200px;
+            border-radius: 20px;
+            padding: 40px ;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button id="but" onclick="gen()">GENARATE COLOR</button>
+    <script>
+        function gen()
+        {
+        let color=["a","b","c","d","e","f","A","B","C","D","E","F","0","1","2","3","4","5","6","7","8","9"]
+        let col="#"
+        for(i=0;i<6;i++)
+        {
+            let x=Math.floor(Math.random()* color.length)
+            col=col+color[x]
+        }
+        document.getElementById("h1").innerHTML=col
+        document.querySelector("body").style.backgroundColor=col
+    }
+    </script>
+</body>
+</html>

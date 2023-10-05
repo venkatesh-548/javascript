@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <label for="name">NAME:</label><input type="text" id="name"><br><br>
+    <label for="phone">PHONE:<input type="number" id="phone"></label>
+    <br>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <button onclick="details()">click</button>
+
+    <script>
+        function details()
+        {
+            let name1=document.getElementById("name").value;
+            if(name1.length>3 && name1.length<15)
+            {
+            localStorage.setItem("NAME",name1)
+            let a=localStorage.getItem("NAME")
+            document.getElementById("p1").innerHTML=`the name is ${a}`
+            document.getElementById("p1").style.color=`green`
+            }
+            else
+            {
+                document.getElementById("p1").innerHTML=`INVALID NAME`
+                document.getElementById("p1").style.color=`red`
+            }
+            if(name1=="")
+            {
+                document.getElementById("p1").innerHTML=`DON'T LEAVE EMPTY`
+                document.getElementById("p1").style.color=`red`
+            }
+            
+            let phone1=document.getElementById("phone").value
+            if(phone1.length==10)
+            {
+                if(9==phone1.slice(0,1) || 6==phone1.slice(0,1) || 8==phone1.slice(0,1)||7==phone1.slice(0,1))
+                {
+                sessionStorage.setItem("PHONE",phone1)
+                let b=sessionStorage.getItem("PHONE")
+                document.getElementById("p2").innerHTML=`the phone number is ${b}`
+                document.getElementById("p2").style.color=`green`
+                }
+                else
+                {
+                    document.getElementById("p2").innerHTML=`INVALID PHONE NUMBER`
+                    document.getElementById("p2").style.color=`red`
+                }
+            }
+            else
+            {
+                document.getElementById("p2").innerHTML=`INVALID PHONE NUMBER`
+                document.getElementById("p2").style.color=`red`
+            }
+            // sessionStorage.setItem("PHONE",phone1)
+            // let b=sessionStorage.getItem("PHONE")
+            // document.getElementById("p2").innerHTML=`the phone number is ${b}`
+        }
+    </script>
+</body>
+</html>

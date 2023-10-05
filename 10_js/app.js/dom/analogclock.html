@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.338);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+        .container{
+            position: relative;
+        }
+        .clock{
+            position: absolute;
+            background-color: cadetblue;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border: 2px solid orangered;
+            box-shadow: 0px 0px 30px orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock span{
+            position: absolute;
+            transform: rotate(calc(30deg*var(--a)));
+            inset: 5px;
+            text-align: center;
+        }
+        .clock span i{
+            transform: rotate(calc(-30deg*var(--a)));
+            position: absolute;
+            font-size: 20px;
+
+        }
+        .clock::before{
+            content:'';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background-color: black;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .time i{
+            position: absolute;
+            width: 4px;
+            height: var(--h);
+            background-color: var(--b);
+            border-radius: 10px;
+        }
+        .time{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="clock">
+                <div class="time" style="--b:green; --h:60px;"><i></i></div>
+                <div class="time" style="--b:white; --h:50px;"><i></i></div>
+                <div class="time" style="--b:orangered; --h:40px;"><i></i></div>
+                <span style="--a:1"><i>1</i></span>
+                <span style="--a:2"><i>2</i></span>
+                <span style="--a:3"><i>3</i></span>
+                <span style="--a:4"><i>4</i></span>
+                <span style="--a:5"><i>5</i></span>
+                <span style="--a:6"><i>6</i></span>
+                <span style="--a:7"><i>7</i></span> 
+                <span style="--a:8"><i>8</i></span>
+                <span style="--a:9"><i>9</i></span>
+                <span style="--a:10"><i>10</i></span>
+                <span style="--a:11"><i>11</i></span>
+                <span style="--a:12"><i>12</i></span>
+            </div>
+        </div>
+        <script>
+            function displayClock()
+            {
+            let h=document.getElementById("hour");
+            let m=document.getElementById("min")
+            let s=document.getElementById("sec")
+
+            let date=new Date();
+            let hh=date.getHours();
+            let mm=date.getMinutes();
+            let ss=date.getSeconds();
+            let h1=30*hh+mm/2
+            let m1=6*mm
+            let s1=6*ss
+            h.style.transform=`rotate(${h1}deg)`
+            m.style.transform=`rotate(${m1}deg)`
+            s.style.transform=`rotate(${s1}deg)`
+            }
+            setInterval(() => {
+                displayClock()
+            }, 1000);
+
+        </script>
+    </body>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1,#p2{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <label for="name">NAME:</label><input type="text" id="name"><br><br>
+    <label for="phone">PHONE:<input type="number" id="phone"></label>
+    <br>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <button onclick="details()">click</button>
+
+    <script>
+        function details()
+        {
+            let name1=document.getElementById("name").value;
+            localStorage.setItem("NAME",name1)
+            let a=localStorage.getItem("NAME")
+            document.getElementById("p1").innerHTML=`the name is ${a}`
+
+            let phone1=document.getElementById("phone").value
+            sessionStorage.setItem("PHONE",phone1)
+            let b=sessionStorage.getItem("PHONE")
+            document.getElementById("p2").innerHTML=`the phone number is ${b}`
+        }
+    </script>
+</body>
+</html>

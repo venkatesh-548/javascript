@@ -65,23 +65,21 @@
     <script>
         function display(data)
         {
-            document.getElementById("inp1").value+=data
+            document.getElementById("inp1").value+=data;
         }
         function evalution()
         {
-            let value1=document.getElementById("inp1").value
-            console.log(value1);
-            let a=eval(value1)
-            console.log(a);
-            document.getElementById('inp1').value=a
+            let value1=document.getElementById("inp1").value;
+            let val=eval(value1)
+            document.getElementById("inp1").value=val
         }
         function clear1()
         {
-            document.getElementById('inp1').value=""
+            document.getElementById("inp1").value=""
         }
         function deletion()
         {
-            let b=document.getElementById('inp1')
+            let b=document.getElementById('inp1').value;
             document.getElementById('inp1').value=b.value.slice(0,-1)
         }
     </script>
