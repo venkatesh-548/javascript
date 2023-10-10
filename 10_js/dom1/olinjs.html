@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=document.body;
+        let ol=document.createElement("ol")
+        ol.setAttribute("type","1")
+        ol.setAttribute("start","10")
+
+        let arr=["HTML","CSS","JAVASCRIPT"]
+        for(i=0;i<=arr.length-1;i++)
+        {
+            let li=document.createElement("li")
+            li.innerHTML=arr[i]
+            ol.append(li)
+        }
+        b.append(ol)
+    </script>
+</body>
+</html>

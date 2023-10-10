@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=document.body;
+        let tab=document.createElement("table")
+        tab.setAttribute("border","all")
+        tab.setAttribute("rules","all")
+
+        qli=["Studentname","Qualification","percentage"]
+        std1=["ram","b.tech","65"]
+        std2=["sam","inter","80"]
+        std3=["tom","m.tech","70"]
+        let tr1=document.createElement("tr")
+        for(i=0;i<qli.length;i++)
+        {
+            let th=document.createElement("th")
+            th.innerHTML=qli[i]
+            tr1.append(th)
+        }
+
+        let tr2=document.createElement("tr")
+        for(i=0;i<std1.length;i++)
+        {
+            let td=document.createElement("td")
+            td.innerHTML=std1[i]
+            tr2.append(td)
+        }
+
+        let tr3=document.createElement("tr")
+        for(i=0;i<std2.length;i++)
+        {
+            let td=document.createElement("td")
+            td.innerHTML=std2[i]
+            tr3.append(td)
+        }
+        let tr4=document.createElement("tr")
+        for(i=0;i<std3.length;i++)
+        {
+            let td=document.createElement("td")
+            td.innerHTML=std3[i]
+            tr4.append(td)
+        }
+
+        tab.append(tr1)
+        tab.append(tr2)
+        tab.append(tr3)
+        tab.append(tr4)
+        b.append(tab)
+
+
+    </script>
+</body>
+</html>

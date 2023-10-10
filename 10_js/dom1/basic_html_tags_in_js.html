@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            height: 600px;
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let b=document.body;
+        let video=document.createElement("video")
+        video.src="adivideo.mp4"
+        video.controls="controls"
+        video.autoplay=true
+        video.muted=true
+        video.classList.add("video")
+        b.append(video)
+
+        let h1=document.createElement("h1")
+        let mark=document.createElement("marquee")
+        mark.innerHTML="welcome to js"
+        mark.setAttribute("direction","right")
+        h1.append(mark)
+        b.append(h1)
+
+    </script>
+</body>
+</html>

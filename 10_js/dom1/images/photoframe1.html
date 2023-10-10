@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            background-color:black;
+            width: 500px;
+            height: 600px;
+        }
+        .div1{
+            width: 162px;
+            height: 163px;
+            background-color: rgb(66, 255, 3); 
+            float: left;
+            border: 2px solid red;
+            position: relative;
+            top: 100px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            padding: 30px 0px 30px 0px;
+            width: 500px;
+            position:absolute;
+            top:-15px;
+            background-color: blueviolet;
+            text-align: center;
+            color: aliceblue;
+            text-shadow: 2px 2px 2px red,-2px 2px 2px red,2px -2px 2px red,-2px -2px 2px red;
+        }
+        .img1{
+            height: 100px;
+            width: 100px;
+            border-radius: 30px;  
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let body1=document.body
+        let maindiv=document.createElement("div")
+        maindiv.setAttribute("id","main")
+        body1.append(maindiv)
+
+        let h1=document.createElement("h1")
+        h1.innerHTML="PHOTO FRAME"
+        maindiv.append(h1)
+        let img=document.createElement("img")
+        img.src="img1.jpg"
+
+        let div1=document.createElement("div","div")
+        div1.classList.add("div1")
+        img.classList.add("img1")
+        maindiv.append(div1)
+        div1.append(img)
+        let img1=document.createElement("img")
+        img1.src="img2.jpg"
+        img1.classList.add("img1")
+
+        let div2=document.createElement("div")
+        div2.classList.add("div1")
+        maindiv.append(div2)
+        div2.append(img1)
+        let img2=document.createElement("img")
+        img2.src="img3.jpg"
+        img2.classList.add("img1")
+
+        let div3=document.createElement("div")
+        div3.classList.add("div1")
+        maindiv.append(div3)
+        div3.append(img2)
+        let img3=document.createElement("img")
+        img3.src="img4.jpg"
+        img3.classList.add("img1")
+
+        let div4=document.createElement("div")
+        div4.classList.add("div1")
+        maindiv.append(div4)
+        div4.append(img3)
+        let img4=document.createElement("img")
+        img4.src="img5.jpg"
+        img4.classList.add("img1")
+
+        let div5=document.createElement("div")
+        div5.classList.add("div1")
+        maindiv.append(div5)
+        div5.append(img4)
+        let img5=document.createElement("img")
+        img5.src="img6.jpg"
+        img5.classList.add("img1")
+
+        let div6=document.createElement("div")
+        div6.classList.add("div1")
+        maindiv.append(div6)
+        div6.append(img5)
+        let img6=document.createElement("img")
+        img6.src="img7.jpg"
+        img6.classList.add("img1")
+
+        let div7=document.createElement("div")
+        div7.classList.add("div1")
+        maindiv.append(div7)
+        div7.append(img6)
+        let img7=document.createElement("img")
+        img7.src="img3.jpg"
+        img7.classList.add("img1")
+
+        let div8=document.createElement("div")
+        div8.classList.add("div1")
+        maindiv.append(div8)
+        div8.append(img7)
+        let img8=document.createElement("img")
+        img8.src="img1.jpg"
+        img8.classList.add("img1")
+
+        let div9=document.createElement("div")
+        div9.classList.add("div1")
+        maindiv.append(div9)
+        div9.append(img8)
+        let img9=document.createElement("img")
+        img9.src="winter.jpg"
+        img9.classList.add("img1")
+    </script>
+</body>
+</html>

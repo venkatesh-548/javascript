@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            padding: 20px;
+            background-color: orangered;
+            color: navy;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        div{
+            text-align: center;
+            padding: 10px;
+            background-color: azure;
+            color: cyan;
+        }
+        button{
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>WELCOME TO JAVASCRIPT</nav>
+    <P></P>
+    <P></P>
+    <div>
+    <h1 id="h1"></h1>
+    <button onclick="wishmessage('good morning','blue')">good morning</button>
+    <button onclick="wishmessage('good afternoon','black')">good afternoon</button>
+    <button onclick="wishmessage('good evening','yellow')">good evening</button>
+    <button onclick="wishmessage('good night','pink')">good night</button>
+    </div>
+</body>
+<script>
+    // let h1=document.querySelector("#h1")
+    // h1.innerHTML="good morning"
+
+    // function saygoodmorning()
+    // {
+    //     let h1=document.querySelector("#h1")
+    //     h1.innerHTML="good morning"
+    //     h1.style.color="red"
+    //     h1.style.backgroundColor="green"
+    //     h1.style.padding="20px"
+    // }
+    // function saygoodafternoon()
+    // {
+    //     let h1=document.querySelector("#h1")
+    //     h1.innerHTML="good afternoon"
+    //     h1.style.color="white"
+    //     h1.style.backgroundColor="black"
+    //     h1.style.padding="20px"
+    // }
+    // function saygoodevening()
+    // {
+    //     let h1=document.querySelector("#h1")
+    //     h1.innerHTML="good evening"
+    //     h1.style.color="navy"
+    //     h1.style.backgroundColor="skyblue"
+    //     h1.style.padding="20px"
+    // }
+    // function saygoodnight()
+    // {
+    //     let h1=document.querySelector("#h1")
+    //     h1.innerHTML="good night"
+    //     h1.style.color="yellow"
+    //     h1.style.backgroundColor="blue"
+    //     h1.style.padding="20px"
+    // }
+
+    function wishmessage(message,backgroundColor)
+    {
+        let h1=document.querySelector("h1")
+        h1.innerText=message
+        h1.style.backgroundColor=backgroundColor
+        h1.style.color="red"
+        h1.style.padding="20px"
+    }
+</script>
+</html>

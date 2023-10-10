@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: orangered;
+            font-size: 30px;
+            font-weight: 800;
+            text-shadow: 1px 1px 1px white,1px -1px 1px white,-1px 1px 1px white,-1px -1px 1px white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>WELCOME TO JAVASCRIPT</nav>
+    <p></p>
+    <h1>CHANGE HTML CONTENT</h1>
+
+    <script>
+        //to access the whole body
+        console.log(document.body);
+
+        //to accesssome main tags
+        console.log(document.head);
+        console.log(document.title);
+        let nav=document.querySelector("nav")
+        console.log(nav);
+
+        //to acces the main content in the text
+
+        console.log(nav.innerHTML);
+        console.log(nav.innerText);
+
+        //to change the content
+
+        // nav.innerHTML="hai welcome to my world"
+
+        //to apply the styles to the tags using js
+        let h1=document.querySelector("h1")
+        h1.style.backgroundColor=`green`
+        h1.style.color='navy'
+        h1.style.textAlign="center"
+        h1.style.padding="20px"
+
+
+        
+    </script>
+</body>
+</html>
