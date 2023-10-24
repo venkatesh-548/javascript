@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel">
+        <option value="">--select option--</option>
+    </select>
+
+    <script>
+        let a=document.getElementById("sel")
+        let arr=["A","U","I","E","U","B","M"]
+        let arr1=arr.sort()
+        console.log(arr1);
+        for(i=0;i<arr1.length;i++)
+        {
+            let option=document.createElement("option")
+            console.log(option);
+            // option.innerHTML=arr1[i]
+            let b=document.createTextNode(arr1[i])
+            option.append(b)
+            a.append(option)
+        }
+        let b=document.body
+    </script>
+</body>
+</html>

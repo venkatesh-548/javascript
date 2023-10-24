@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel">
+        <option value="">--select option--</option>
+    </select>
+
+    <script>
+        let a=document.getElementById("sel")
+        let arr=["ANDHRA PRADESH","TELANGANA","TAMILNADU","KARNATAKA","KERALA","GOA","MAHARASTRA","ODISSA","CHATTISHGADH","MADYAPRADESH","GUJRATH","DELHI","BIHAR","UTTARPRADESH","UTTRAKANDH","WEST BENGAL","ASSAM","ARUNACHALPRADESH","MEGALAYA","PUNJAB","J&K","CHANDIGARH",""]
+        let arr1=arr.sort()
+        console.log(arr1);
+        for(i=0;i<arr1.length;i++)
+        {
+            let option=document.createElement("option")
+            console.log(option);
+            // option.innerHTML=arr1[i]
+            let b=document.createTextNode(arr1[i])
+            option.append(b)
+            a.append(option)
+            
+        }
+    </script>
+</body>
+</html>

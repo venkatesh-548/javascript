@@ -24,48 +24,48 @@
             position: relative;
             left: 40px;
             font-size: 60px;
-            color: white;
+            color: rgb(126, 4, 4);
             cursor: pointer;
         }
         .right{
             position: relative;
             right: 40px;
             font-size: 60px;
-            color: white;
+            color: rgb(123, 6, 6);
             cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left"><i class="fa-solid fa-circle-chevron-left"></i></div>
-        <div class="img"><img src="./images/img5.jpg" alt="" id="imag"></div>
-        <div class="right"><i class="fa-solid fa-circle-chevron-right"></i></div>
+        <div class="left" onclick="demo()"><i class="fa-solid fa-circle-chevron-left"></i></div>
+        <div class="img"><img src="img5.jpg" alt="" id="imag"></div>
+        <div class="right" onclick="demo1()"><i class="fa-solid fa-circle-chevron-right"></i></div>
     </div>
 
     <script>
-        let images=['img1','img2','img3','img4','img5','img6','img7','img8','img9','img10']
-
-        let imag1=document.getAttribute("imag")
-        let imagindex=5;
-
-        let leftarrow=document.querySelector(".left")
-        let rightarrow=document.querySelector(".right")
-
-        leftarrow.onclick=function()
+        let images=['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.webp','img9.webp','img10.webp']
+        let i=0
+        function demo()
         {
-            imagindex=imagindex-1
-            img.setAttribute('src','images/'+images[imagindex])
-
+            imag.src=images[i]
+            i++
+            if(i==images.length)
+            {
+                i=0
+            }
         }
 
-        rightarrow.onclick=function(){
-            imagindex+=1
-            img.setAttribute('src','images/'+images[imagindex])
+        let j=images.length
+        function demo1()
+        {
+            imag.src=images[j]
+            j--
+            if(j==0)
+            {
+                j=arr.length
+            } 
         }
-
-
-
     </script>
 </body>
 </html>

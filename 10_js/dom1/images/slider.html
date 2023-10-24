@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let img1=document.createElement("img")
+        img1.src="img5.jpg"
+        img1.setAttribute("id",'img1')
+
+        let btn1=document.createElement("button")
+        btn1.innerHTML=">"
+        btn1.setAttribute("id",'btn1')
+        let btn2=document.createElement("button")
+        btn2.innerHTML="<"
+        btn2.setAttribute("id","btn2")
+
+        let arr=['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg',]
+        // let i=0
+        // btn1.addEventListener('click',function()
+        // {
+        //     img1.src=arr[i]
+        //     i++
+        //     if(i==arr.length)
+        //     {
+        //         i=0
+        //     }
+        // })
+
+        let y=arr.length
+        btn2.addEventListener('click',function()
+        {
+            y--
+            img1.src=arr[y]
+
+            if(y==0)
+            {
+                y=arr.length
+            }
+        })
+
+        let i=0
+        function demo()
+        {
+            img1.src=arr[i]
+            i++
+            if(i==arr.length)
+            {
+                i=0
+            }
+        }
+
+        let x=arr.length
+        function demo()
+        {
+            img1.src=
+        }
+
+    </script>
+</body>
+</html>

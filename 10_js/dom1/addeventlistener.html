@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 30px 70px;
+            font-size: 29px;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            flex-direction: column;
+        }
+        button{
+            
+            padding: 20px 50px;
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: blueviolet;
+            color: white;
+            font-size: 25px;
+        }
+        
+        button:focus{
+            background-color: aqua;
+            color: red;
+
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" required id="inp1">
+    <input type="text">
+    <h1 id="abc"> WELCOME TO ADDEVENTLISTENER</h1>
+    <button>click</button>
+
+    <script>
+        function abc()
+        {
+            let a=document.querySelector("#abc")
+            a.style.color="deeppink"
+
+        }
+        let b=document.querySelector("button")
+        //b.onclick=abc        //function name without ()
+
+        //b.addEventListener("click",abc)
+        b.addEventListener("click",function()
+        {
+            let a=document.querySelector("#abc")
+            a.style.color="deeppink"
+            a.style.backgroundColor="blue"
+        })
+        document.querySelector("#inp1").addEventListener("input",function()
+        {
+            let inp1=document.querySelector("#inp1").value
+            let a=inp1.length 
+            if(a==3)
+            {
+                document.querySelector("#inp1").style.backgroundColor="red"
+                document.body.style.backgroundColor="lightcoral"
+            }
+            else if(a>3 && a<=5)
+            {
+                document.querySelector("#inp1").style.backgroundColor="yellow"
+                document.body.style.backgroundColor="orange"
+            }
+            else if(a>5)
+            {
+                document.querySelector("#inp1").style.backgroundColor="green"
+                document.body.style.backgroundColor="lightgreen"
+            }
+        })
+    </script>
+</body>
+</html>
