@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://th.bing.com/th/id/R.49735b38c27ca67787e201a8f4b0fd6d?rik=N%2f09W%2fZZWiErrg&riu=http%3a%2f%2fhdwpro.com%2fwp-content%2fuploads%2f2017%2f01%2fNatural-Full-HD-Background.jpg&ehk=QcKIOWLmx2AWZtb1pZ%2fFm6Q5Er3C%2b7W3UNz5O5DAfEs%3d&risl=&pid=ImgRaw&r=0);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* margin: 0px; */
+        }
+        #nav{
+            height: 70px;
+            width: 100%;
+            /* background-color: aliceblue; */
+        }
+        #logo{
+            color: white;
+            font-size: 40px;
+            font-weight: 900;
+            position: relative;
+            top: 10px;
+            left: 30px;
+            text-decoration: none;
+        }
+        #logo:hover{
+            font-size: 50px;
+        }
+        .bar{
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            left: 600px;
+            top: 10px;
+            padding-left: 40px;
+        }
+        .bar:hover{
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        #bar{
+            height: 500px;
+            width: 340px;
+            /* background-color: aliceblue; */
+            position: relative;
+            left: 400px;
+            border-radius: 30px;
+            border: 2px solid;
+        }
+        h1{
+            position: relative;
+            top: 20px;
+            left: 100px;
+            font-size: 40px;
+            text-shadow: 1px 1px 0px pink,1px -1px 0px pink,1px -1px 0px pink,-1px 1px 0px pink;
+            color: white;
+            font-style: italic;
+        }
+        h1:hover{
+            font-size: 45px;
+            box-sizing: initial;
+        }
+        input{
+            border: 0px;
+            position: relative;
+            left: 30px;
+            font-size: 25px;
+            color: red;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        input:active{
+            border: 0px;
+        }
+        button{
+            position: relative;
+            left: 100PX;
+            top: 50PX;
+            padding-left: 40px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 40%;
+            font-size: 20px;
+        }
+        i{
+            color: white;
+            font-size: 20px;
+        }
+        i:hover{
+            font-size: 30px;
+        }
+        #p1,#p2,#p3,#p4{
+            font-size: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div id="nav">
+    <a href=""><i id="logo">logo</i></a>
+    <a href=""><i class="bar">Home</i></a>
+    <a href=""><i class="bar">About</i></a>
+    <a href=""><i class="bar">Services</i></a>
+    <a href=""><i class="bar">Contact</i></a>
+</div>
+<div id="bar">
+<h1>Login</h1>
+
+<input type="text" placeholder="User Name" id="name" ><i class="fa-solid fa-user"></i><span id="p1"></span></br><br>
+<hr>
+<input type="tel" placeholder="Phone Number" id="phone"><i class="fa-solid fa-phone"><span id="p2"></span></i><br><br>
+<hr>
+<input type="email" placeholder="Email" id="email"><i class="fa-solid fa-envelope"><span id="p3"></span></i><br><br>
+<hr>
+<input type="password" placeholder="password" id="password"><i class="fa-solid fa-eye"><span id="p4"></span></i><br><br>
+<hr>
+
+<button onclick="valid()">SUBMIT</button>
+</div>
+<script>
+    function valid(){
+            let name1=document.getElementById("name").value;
+            if(name1.length>3 && name1.length<15)
+            {
+            localStorage.setItem("NAME",name1)
+            let a=localStorage.getItem("NAME")
+            document.getElementById("p1").innerHTML=`the name is ${a}`
+            document.getElementById("p1").style.color=`green`
+            }
+            else
+            {
+                document.getElementById("p1").innerHTML=`INVALID NAME`
+                document.getElementById("p1").style.color=`red`
+            }
+            if(name1=="")
+            {
+                document.getElementById("p1").innerHTML=`DON'T LEAVE EMPTY`
+                document.getElementById("p1").style.color=`red`
+            }
+            
+            let phone1=document.getElementById("phone").value
+            if(phone1.length==10)
+            {
+                if(9==phone1.slice(0,1) || 6==phone1.slice(0,1) || 8==phone1.slice(0,1)||7==phone1.slice(0,1))
+                {
+                sessionStorage.setItem("PHONE",phone1)
+                let b=sessionStorage.getItem("PHONE")
+                document.getElementById("p2").innerHTML=`the phone number is ${b}`
+                document.getElementById("p2").style.color=`green`
+                }
+                else
+                {
+                    document.getElementById("p2").innerHTML=`INVALID PHONE NUMBER`
+                    document.getElementById("p2").style.color=`red`
+                }
+            }
+            else
+            {
+                document.getElementById("p2").innerHTML=`INVALID PHONE NUMBER`
+                document.getElementById("p2").style.color=`red`
+            }
+
+            let email1=document.getElementById("email").value;
+            if(email1.length>10 && email1.length<25)
+            {
+            localStorage.setItem("EMAIL",name1)
+            let a=localStorage.getItem("EMAIL")
+            document.getElementById("p3").innerHTML=`the email is ${a}`
+            document.getElementById("p3").style.color=`green`
+            }
+            else
+            {
+                document.getElementById("p3").innerHTML=`INVALID EMAIL`
+                document.getElementById("p3").style.color=`red`
+            }
+            if(email1=="")
+            {
+                document.getElementById("p3").innerHTML=`DON'T LEAVE EMPTY`
+                document.getElementById("p3").style.color=`red`
+            }
+
+            let pass1=document.getElementById("password").value;
+            if(pass1.length>8 && pass1.length<15)
+            {
+            localStorage.setItem("PASSWORD",name1)
+            let a=localStorage.getItem("PASSWORD")
+            document.getElementById("p4").innerHTML=`the password is ${a}`
+            document.getElementById("p4").style.color=`green`
+            }
+            else
+            {
+                document.getElementById("p1").innerHTML=`INVALID PASSWORD`
+                document.getElementById("p1").style.color=`red`
+            }
+            if(pass1=="")
+            {
+                document.getElementById("p1").innerHTML=`DON'T LEAVE EMPTY`
+                document.getElementById("p1").style.color=`red`
+            }
+
+
+           
+        }
+</script>
+    
+</body>
+</html> 

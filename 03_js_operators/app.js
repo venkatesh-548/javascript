@@ -10,6 +10,7 @@ js operators
 7 ternary operator : ?:
 8 equality operator == ===
 
+9.spread operator:- ... it allows the iterable,like an array
  */
 //assignment operators
 

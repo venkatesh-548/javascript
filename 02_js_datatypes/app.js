@@ -33,5 +33,58 @@ let test=null;
 console.log(`test:${test} type:${typeof test}`)
 
 
+let arr=[1,5,2,8,9,5,6]
+
+let min=Math.min(...arr);
+let max=Math.max(...arr)
+console.log(min);
+console.log(max);
+
+let num=[1,2,3]
+let sum=(a,b,c)=>a+b+c;
+console.log(sum(...num));
+
+let x=7
+let y='7'
+console.log(x==y);
+console.log(x===y);
+
+let array=[10, 5, 8, 12, 7, 2];
+let s=array.sort()
+console.log(s);
+let lar=arr[0];
+let slar=arr[1];
+
+for(let i=0;i<array.length;i++)
+{
+    if(array[i]>lar)
+    {
+        lar=array[i];
+    }
+    else if(array[i]>slar && array[i]!==lar)
+    {
+        slar=array[i];
+    }
+}
+console.log(lar);
+console.log(slar);
+
+
+let st='malayalam'
+
+let res=''
+for(let i=0;i<st.length;i++)
+{
+ res=st[i]+res;
+}
+if(res===st)
+{
+    console.log(res)
+}
+else{
+    console.log("not a palin");
+}
+
+
 
 
